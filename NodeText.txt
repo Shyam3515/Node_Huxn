@@ -1,0 +1,13 @@
+What is the Module Wrapper?
+When you write code in a Node.js module, it is wrapped like this under the hood:
+
+(function (exports, require, module, __filename, __dirname) {
+  // Your module code here
+});
+This is the Module Wrapper Function, and it adds these five parameters to each module:
+
+exports: An object used to export values from the module.
+require: A function to import other modules.
+module: An object representing the current module, with a property exports.
+__filename: The full path of the current module file.
+__dirname: The directory path of the current module file.
